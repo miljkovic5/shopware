@@ -18,17 +18,17 @@
     <template #smart-bar-actions>
         <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
         {% block sw_profile_index_actions %}
-        <sw-button-process
+        <mt-button
             class="sw-profile__save-action"
             variant="primary"
             :is-loading="isLoading || isUserLoading"
-            :process-success="isSaveSuccessful"
             :disabled="isLoading || isUserLoading || !acl.can('user.update_profile')"
+            size="default"
             @update:process-success="saveFinish"
             @click.prevent="onSave"
         >
             {{ $tc('sw-profile.index.buttonSaveLabel') }}
-        </sw-button-process>
+        </mt-button>
         {% endblock %}
     </template>
 
@@ -36,29 +36,17 @@
         <sw-card-view>
             <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
             {% block sw_profile_index_tabs %}
-            <sw-tabs
-                position-identifier="sw-profile-index"
-            >
-                <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
-                {% block sw_profile_index_tabs_item_general %}
-                <sw-tabs-item
-                    :route="{ name: 'sw.profile.index.general' }"
-                    :title="$tc('sw-profile.tabGeneral.title')"
+            <div class="sw-profile-index__tabs">
+                <mt-tabs
+                    position-identifier="sw-profile-index"
+                    :items="[
+                        { label: $tc('sw-profile.tabGeneral.title'), name: 'general' },
+                        { label: $tc('sw-profile.tabSearchPreferences.title'), name: 'searchPreferences' }
+                    ]"
+                    defaultItem="general"
                 >
-                    {{ $tc('sw-profile.tabGeneral.title') }}
-                </sw-tabs-item>
-                {% endblock %}
-
-                <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
-                {% block sw_profile_index_tabs_item_search_preferences %}
-                <sw-tabs-item
-                    :route="{ name: 'sw.profile.index.searchPreferences' }"
-                    :title="$tc('sw-profile.tabSearchPreferences.title')"
-                >
-                    {{ $tc('sw-profile.tabSearchPreferences.title') }}
-                </sw-tabs-item>
-                {% endblock %}
-            </sw-tabs>
+                </mt-tabs>
+            </div>
             {% endblock %}
 
             <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->

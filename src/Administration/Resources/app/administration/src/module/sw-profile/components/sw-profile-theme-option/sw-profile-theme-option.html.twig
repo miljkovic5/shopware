@@ -1,0 +1,9 @@
+<button class="sw-profile-theme-option" @click="$emit('click')">
+    <img class="sw-profile-theme-option__preview-image" :src="image" />
+
+    <div class="sw-profile-theme-option__info">
+        <div :class="{ 'sw-profile-theme-option__radio-indicator': true, 'sw-profile-theme-option__radio-indicator--selected': selected }"></div>
+
+        <span class="sw-profile-theme-option__label">{{ label }}</span>
+    </div>
+</button>

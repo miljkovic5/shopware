@@ -212,7 +212,7 @@
                     <template v-if="isFileUpload">
                         <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
                         {% block sw_media_upload_v2_regular_media_sidebar_button %}
-                        <sw-button
+                        <mt-button
                             v-if="hasOpenMediaButtonListener"
                             class="sw-media-upload-v2__button open-media-sidebar"
                             :class="{ 'is--small': variant === 'small'}"
@@ -230,21 +230,22 @@
                             <template v-else>
                                 {{ $tc('global.sw-media-upload-v2.buttonOpenMedia') }}
                             </template>
-                        </sw-button>
+                        </mt-button>
                         {% endblock %}
 
                         <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
                         {% block sw_media_upload_v2_regular_upload_button %}
-                        <sw-button
+                        <mt-button
                             class="sw-media-upload-v2__button upload"
                             :class="{ 'is--small': variant === 'small'}"
-                            variant="ghost"
+                            variant="primary"
+                            ghost
                             size="small"
                             :disabled="disabled"
                             @click="onClickUpload"
                         >
                             {{ buttonFileUploadLabel }}
-                        </sw-button>
+                        </mt-button>
                         {% endblock %}
                     </template>
                     {% endblock %}

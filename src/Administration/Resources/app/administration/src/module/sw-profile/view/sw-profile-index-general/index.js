@@ -2,6 +2,7 @@
  * @package services-settings
  */
 import template from './sw-profile-index-general.html.twig';
+import './sw-profile-index-general.scss';
 
 const { mapPropertyErrors } = Shopware.Component.getComponentHelper();
 
@@ -9,7 +10,7 @@ const { mapPropertyErrors } = Shopware.Component.getComponentHelper();
 export default {
     template,
 
-    inject: ['acl'],
+    inject: ['acl', 'themePreference', 'setThemePreference'],
 
     props: {
         user: {
@@ -80,6 +81,10 @@ export default {
                 this.$emit('new-password-confirm-change', newPasswordConfirm);
             },
         },
+
+        assetFilter() {
+            return Shopware.Filter.getByName('asset');
+        }
     },
 
     methods: {

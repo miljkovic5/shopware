@@ -8,7 +8,11 @@
 >
     <sw-notifications ref="notifications" />
     <sw-duplicated-media-v2 v-if="isLoggedIn" />
-    <router-view />
+
+    <sw-theme-provider>
+        <router-view />
+    </sw-theme-provider>
+
     <sw-settings-cache-modal v-if="isLoggedIn" />
     <sw-license-violation />
     <sw-hidden-iframes />

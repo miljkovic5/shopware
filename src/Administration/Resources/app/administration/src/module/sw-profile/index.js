@@ -10,6 +10,7 @@ const { Module } = Shopware;
 Shopware.Component.register('sw-profile-index', () => import('./page/sw-profile-index'));
 Shopware.Component.register('sw-profile-index-general', () => import('./view/sw-profile-index-general'));
 Shopware.Component.register('sw-profile-index-search-preferences', () => import('./view/sw-profile-index-search-preferences'));
+Shopware.Component.register('sw-profile-theme-option', () => import('./components/sw-profile-theme-option'))
 /* eslint-enable max-len, sw-deprecation-rules/private-feature-declarations */
 
 // eslint-disable-next-line sw-deprecation-rules/private-feature-declarations

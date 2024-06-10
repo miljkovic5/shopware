@@ -186,9 +186,9 @@ module.exports = {
                 'vue/no-deprecated-slot-scope-attribute': ['error'],
                 'sw-deprecation-rules/no-twigjs-blocks': 'error',
                 // @deprecated v.6.7.0.0 - will be error in v.6.7
-                'sw-deprecation-rules/no-deprecated-components': ['warn', 'disableFix'],
+                'sw-deprecation-rules/no-deprecated-components': ['warn'],
                 // @deprecated v.6.7.0.0 - will be error in v.6.7
-                'sw-deprecation-rules/no-deprecated-component-usage': ['warn', 'disableFix'],
+                'sw-deprecation-rules/no-deprecated-component-usage': ['warn'],
                 'vue/no-useless-template-attributes': 'error',
                 'vue/no-lone-template': 'error',
 

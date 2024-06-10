@@ -6,6 +6,10 @@
     &.is--active {
         color: $color-shopware-brand-500;
     }
+
+    .sw-icon {
+        color: var(--color-icon-primary-default);
+    }
 }
 
 .sw-help-center__context-menu {

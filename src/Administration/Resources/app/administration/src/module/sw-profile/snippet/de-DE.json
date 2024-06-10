@@ -33,7 +33,15 @@
       "placeholderOldPassword": "Gib Dein altes Passwort ein ..."
     },
     "tabGeneral": {
-      "title": "Allgemein"
+      "title": "Allgemein",
+      "appereance": {
+        "title": "Erscheinungsbild",
+        "theme": {
+          "dark": "Dunkel",
+          "light": "Hell",
+          "automatic": "Automatisch"
+        }
+      }
     },
     "tabSearchPreferences": {
       "title": "Such-Einstellungen",

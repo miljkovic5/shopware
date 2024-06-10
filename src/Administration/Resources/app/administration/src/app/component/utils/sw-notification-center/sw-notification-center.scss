@@ -8,6 +8,12 @@
     }
 }
 
+.sw-notification-center {
+    .sw-icon {
+        color: var(--color-icon-primary-default);
+    }
+}
+
 .sw-notification-center__context-button--new-available::after {
     content: "";
     display: block;

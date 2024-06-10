@@ -5,6 +5,7 @@ import { email } from 'src/core/service/validation.service';
 import { KEY_USER_SEARCH_PREFERENCE } from 'src/app/service/search-ranking.service';
 import template from './sw-profile-index.html.twig';
 import swProfileState from '../../state/sw-profile.state';
+import './sw-profile-index.scss';
 
 const { Component, Mixin, State } = Shopware;
 const { Criteria } = Shopware.Data;
