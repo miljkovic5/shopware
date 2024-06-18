@@ -43,12 +43,17 @@ import RouterFactory from 'src/core/factory/router.factory';
 import ApiServices from 'src/core/service/api';
 import ModuleFilterFactory from 'src/core/data/filter-factory.data';
 import type { VueI18n } from 'vue-i18n';
+import InAppPurchase from './in-app-purchase';
 import Store from 'src/app/store';
 import ExtensionApi from './extension-api';
 
 /** Initialize feature flags at the beginning */
 if (window.hasOwnProperty('_features_')) {
     Feature.init(_features_);
+}
+
+if (window.hasOwnProperty('_inAppPurchase_')) {
+    InAppPurchase.init(_inAppPurchase_);
 }
 
 // strict mode was set to false because it was defined wrong previously
@@ -182,6 +187,8 @@ class ShopwareClass implements CustomShopwareProperties {
     public Application = application;
 
     public Feature = Feature;
+
+    public InAppPurchase = InAppPurchase;
 
     public ApiService = {
         register: ApiServiceFactory.register,
