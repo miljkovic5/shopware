@@ -4,7 +4,7 @@ import Store from 'src/app/store';
  * @package admin
  * @private
  */
-export default function initStore() {
+export default async function initStore() {
     const app = Shopware.Application?.view?.app;
 
     /**
@@ -15,4 +15,7 @@ export default function initStore() {
     if (app) {
         app.use(Store.instance._rootState);
     }
+
+    // Register all stores
+    await import('src/app/store/in-app-purchases.store');
 }

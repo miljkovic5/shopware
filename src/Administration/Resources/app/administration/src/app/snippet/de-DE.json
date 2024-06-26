@@ -1597,6 +1597,10 @@
   "sw-ai-copilot-warning": {
     "text": "AI-Antworten können ungenau oder irreführend sein."
   },
+  "sw-in-app-purchases": {
+    "title": "In-app Einkäufe",
+    "payment-button": "Zahlung abschließen"
+  },
   "help-center": {
     "sidebar": {
       "title": "Hilfe",

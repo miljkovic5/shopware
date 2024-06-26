@@ -1597,6 +1597,10 @@
   "sw-ai-copilot-warning": {
     "text": "AI responses can be inaccurate or misleading."
   },
+  "sw-in-app-purchases": {
+    "title": "In-app Purchases",
+    "payment-button": "Complete payment"
+  },
   "help-center": {
     "sidebar": {
       "title": "Help",

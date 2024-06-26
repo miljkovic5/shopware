@@ -43,8 +43,8 @@ import RouterFactory from 'src/core/factory/router.factory';
 import ApiServices from 'src/core/service/api';
 import ModuleFilterFactory from 'src/core/data/filter-factory.data';
 import type { VueI18n } from 'vue-i18n';
-import InAppPurchase from './in-app-purchase';
 import Store from 'src/app/store';
+import InAppPurchase from './in-app-purchase';
 import ExtensionApi from './extension-api';
 
 /** Initialize feature flags at the beginning */

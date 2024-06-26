@@ -91,6 +91,7 @@ import type { AdminHelpCenterState } from './app/state/admin-help-center.store';
 import type { DevtoolComponent } from './app/adapter/view/sw-vue-devtools';
 import type { CmsPageState } from './module/sw-cms/state/cms-page.state';
 import type { TopBarButtonState } from './app/state/topbar-button.store';
+import type { IapState } from './app/store/in-app-purchases.store';
 
 // trick to make it an "external module" to support global type extension
 
@@ -353,6 +354,7 @@ declare global {
     interface PiniaRootState {
         cmsPageState: CmsPageState,
         topBarButtonState: TopBarButtonState,
+        inAppPurchase: IapState,
     }
 
     /**

@@ -1,7 +1,6 @@
 import { createPinia, defineStore } from 'pinia';
 import type { Store as PiniaStore, Pinia, _GettersTree, DefineStoreOptions, StateTree } from 'pinia';
 
-
 /**
  * @package admin
  * @private
