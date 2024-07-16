@@ -14,6 +14,11 @@ use Shopware\Core\Framework\Store\InAppPurchase;
 #[Package('checkout')]
 class InAppPurchaseTest extends TestCase
 {
+    protected function tearDown(): void
+    {
+        InAppPurchase::reset();
+    }
+
     public function testAll(): void
     {
         InAppPurchase::registerPurchases(['purchase1' => 'extension-1', 'purchase2' => 'extension-2']);

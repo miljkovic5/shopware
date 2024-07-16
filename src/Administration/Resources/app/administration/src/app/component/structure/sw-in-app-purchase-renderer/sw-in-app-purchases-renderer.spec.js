@@ -9,9 +9,7 @@ async function createWrapper() {
     return mount(await wrapTestComponent('sw-in-app-purchases-renderer', { sync: true }), {
         global: {
             stubs: {
-                'sw-gtc-checkbox': await wrapTestComponent('sw-gtc-checkbox'),
                 'sw-modal': await wrapTestComponent('sw-modal'),
-                'sw-button': await wrapTestComponent('sw-button'),
             },
             provide: {
                 shortcutService: {

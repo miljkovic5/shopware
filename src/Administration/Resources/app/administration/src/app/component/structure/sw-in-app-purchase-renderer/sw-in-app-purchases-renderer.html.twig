@@ -1,21 +1,9 @@
 <sw-modal v-if="modal"
           class="sw-in-app-purchases-renderer"
           :title="$tc('sw-in-app-purchases.title')"
-          :closable="modal.closable"
           @modal-close="closeModal"
 >
-
-    app description and pricing plans go here.
-
-    <sw-gtc-checkbox
-        v-model:value="tocAccepted"
+    <sw-extension-store-landing-page
+        :inside-modal="true"
     />
-    <template #modal-footer>
-        <sw-button
-            variant="primary"
-            @click="purchase"
-        >
-            {{ $tc("sw-in-app-purchases.payment-button") }} &rarr;
-        </sw-button>
-    </template>
 </sw-modal>

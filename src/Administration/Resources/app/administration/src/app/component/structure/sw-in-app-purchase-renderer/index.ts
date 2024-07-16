@@ -23,9 +23,5 @@ Component.register('sw-in-app-purchases-renderer', {
         closeModal() {
             Shopware.Store.get('inAppPurchase').closeModal();
         },
-
-        purchase() {
-            this.closeModal();
-        },
     },
 });

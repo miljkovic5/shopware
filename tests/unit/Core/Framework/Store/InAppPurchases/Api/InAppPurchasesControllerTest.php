@@ -31,6 +31,11 @@ class InAppPurchasesControllerTest extends TestCase
         $this->inAppPurchasesController ??= new InAppPurchasesController();
     }
 
+    protected function tearDown(): void
+    {
+        InAppPurchase::reset();
+    }
+
     public function testActiveInAppPurchasesWithIncorrectContext(): void
     {
         static::expectException(StoreException::class);
@@ -55,7 +60,6 @@ class InAppPurchasesControllerTest extends TestCase
 
     public function testActiveInAppPurchasesWithNoPurchasesShouldReturnEmptyArray(): void
     {
-        InAppPurchase::registerPurchases();
         $request = new Request();
 
         $response = $this->inAppPurchasesController->activeInAppPurchases($request, $this->context);

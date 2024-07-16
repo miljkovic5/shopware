@@ -21,6 +21,11 @@ class InAppPurchaseExtensionTest extends TestCase
         $this->extension = new InAppPurchaseExtension();
     }
 
+    protected function tearDown(): void
+    {
+        InAppPurchase::reset();
+    }
+
     public function testGetFunctions(): void
     {
         $functions = $this->extension->getFunctions();

@@ -17,7 +17,7 @@ use Shopware\Core\Framework\Store\InAppPurchaseRegistry;
 #[Package('checkout')]
 class InAppPurchaseRegistryTest extends TestCase
 {
-    protected function setUp(): void
+    protected function tearDown(): void
     {
         InAppPurchase::reset();
     }
