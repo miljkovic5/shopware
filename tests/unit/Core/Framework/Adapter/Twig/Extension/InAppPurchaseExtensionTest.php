@@ -33,8 +33,8 @@ class InAppPurchaseExtensionTest extends TestCase
         static::assertCount(2, $functions);
         static::assertInstanceOf(TwigFunction::class, $functions[0]);
         static::assertInstanceOf(TwigFunction::class, $functions[1]);
-        static::assertEquals('in_app_purchase', $functions[0]->getName());
-        static::assertEquals('all_in_app_purchases', $functions[1]->getName());
+        static::assertEquals('inAppPurchase', $functions[0]->getName());
+        static::assertEquals('allInAppPurchases', $functions[1]->getName());
     }
 
     public function testIsActive(): void

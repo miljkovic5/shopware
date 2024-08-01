@@ -52,8 +52,8 @@ if (window.hasOwnProperty('_features_')) {
     Feature.init(_features_);
 }
 
-if (window.hasOwnProperty('_inAppPurchase_')) {
-    InAppPurchase.init(_inAppPurchase_);
+if (window.hasOwnProperty('_inAppPurchases_')) {
+    InAppPurchase.init(_inAppPurchases_);
 }
 
 // strict mode was set to false because it was defined wrong previously

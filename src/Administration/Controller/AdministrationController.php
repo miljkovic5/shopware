@@ -90,7 +90,7 @@ class AdministrationController extends AbstractController
 
         return $this->render($template, [
             'features' => Feature::getAll(),
-            'inAppPurchase' => InAppPurchase::all(),
+            'inAppPurchases' => InAppPurchase::all(),
             'systemLanguageId' => Defaults::LANGUAGE_SYSTEM,
             'defaultLanguageIds' => [Defaults::LANGUAGE_SYSTEM],
             'systemCurrencyId' => Defaults::CURRENCY,

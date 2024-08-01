@@ -18,7 +18,7 @@ async function createWrapper(isLoggedIn, forwardLogout = () => {}, route = 'sw.w
                 'sw-license-violation': true,
                 'sw-hidden-iframes': true,
                 'sw-modals-renderer': true,
-                'sw-in-app-purchases-renderer': true,
+                'sw-in-app-purchase-checkout': true,
                 'sw-app-wrong-app-url-modal': true,
                 'router-view': true,
                 'mt-toast': MtToast,

@@ -1,4 +1,4 @@
-import 'src/app/store/in-app-purchases.store';
+import 'src/app/store/in-app-purchase-checkout.store';
 
 /**
  * @package checkout
@@ -6,7 +6,7 @@ import 'src/app/store/in-app-purchases.store';
 import { mount } from '@vue/test-utils';
 
 async function createWrapper() {
-    return mount(await wrapTestComponent('sw-in-app-purchases-renderer', { sync: true }), {
+    return mount(await wrapTestComponent('sw-in-app-purchase-checkout', { sync: true }), {
         global: {
             stubs: {
                 'sw-modal': await wrapTestComponent('sw-modal'),
@@ -21,7 +21,7 @@ async function createWrapper() {
     });
 }
 
-describe('src/app/component/structure/sw-in-app-purchase-renderer', () => {
+describe('src/app/component/structure/sw-in-app-purchase-checkout', () => {
     let wrapper = null;
 
     beforeEach(async () => {
@@ -37,30 +37,30 @@ describe('src/app/component/structure/sw-in-app-purchase-renderer', () => {
     });
 
     it('should render the modal when modal data is set', async () => {
-        const iapEntry = {
+        const requestCheckout = {
             featureId: 'Test Feature',
         };
 
-        Shopware.Store.get('inAppPurchase').openModal(iapEntry);
+        Shopware.Store.get('inAppPurchaseCheckout').request(requestCheckout);
 
         await flushPromises();
 
-        expect(wrapper.find('.sw-in-app-purchases-renderer').exists()).toBe(true);
-        expect(wrapper.find('.sw-in-app-purchases-renderer').text()).toContain('sw-in-app-purchases.title');
+        expect(wrapper.find('.sw-in-app-purchase-checkout').exists()).toBe(true);
+        expect(wrapper.find('.sw-in-app-purchase-checkout').text()).toContain('sw-in-app-purchase-checkout.exsTitle');
     });
 
     it('should not render the modal when modal data is not set', () => {
-        expect(wrapper.vm.modal).toBeNull();
+        expect(wrapper.vm.entry).toBeNull();
 
-        expect(wrapper.find('.sw-in-app-purchases-renderer').exists()).toBe(false);
+        expect(wrapper.find('.sw-in-app-purchase-checkout').exists()).toBe(false);
     });
 
     it('should close the modal when closeModal method is called', async () => {
-        const iapEntry = {
+        const requestCheckout = {
             featureId: 'Test Feature',
         };
 
-        Shopware.Store.get('inAppPurchase').openModal(iapEntry);
+        Shopware.Store.get('inAppPurchaseCheckout').request(requestCheckout);
 
         await flushPromises();
 
@@ -68,6 +68,6 @@ describe('src/app/component/structure/sw-in-app-purchase-renderer', () => {
 
         await flushPromises();
 
-        expect(wrapper.find('.sw-in-app-purchases-renderer').exists()).toBe(false);
+        expect(wrapper.find('.sw-in-app-purchase-checkout').exists()).toBe(false);
     });
 });

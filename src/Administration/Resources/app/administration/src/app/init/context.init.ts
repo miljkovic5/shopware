@@ -4,7 +4,7 @@
 
 /* Is covered by E2E tests */
 import { publish } from '@shopware-ag/meteor-admin-sdk/es/channel';
-import InAppPurchase from '../../core/in-app-purchase';
+import InAppPurchase from 'src/core/in-app-purchase';
 
 // eslint-disable-next-line sw-deprecation-rules/private-feature-declarations
 export default function initializeContext(): void {
@@ -124,7 +124,7 @@ export default function initializeContext(): void {
             name: extension[0],
             type: extension[1].type,
             version: extension[1].version ?? '',
-            inAppPurchases: InAppPurchase.getByExtensionId(extension[1].integrationId ?? ''),
+            inAppPurchases: InAppPurchase.getByExtension(extension[1].integrationId ?? ''),
         };
     });
 
