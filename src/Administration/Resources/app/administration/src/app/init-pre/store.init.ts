@@ -17,5 +17,5 @@ export default async function initStore() {
     }
 
     // Register all stores
-    await import('src/app/store/in-app-purchases.store');
+    await import('src/app/store/in-app-purchase-checkout.store');
 }

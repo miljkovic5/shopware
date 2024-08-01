@@ -135,7 +135,7 @@ class AdministrationControllerTest extends TestCase
                     'cspNonce' => null,
                     'adminEsEnable' => true,
                     'storefrontEsEnable' => true,
-                    'inAppPurchase' => [],
+                    'inAppPurchases' => [],
                 ]
             );
 

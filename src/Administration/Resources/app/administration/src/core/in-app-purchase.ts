@@ -15,7 +15,7 @@ export default class InAppPurchase {
         return this.inAppPurchase;
     }
 
-    static getByExtensionId(extensionId: string): string[] {
+    static getByExtension(extensionId: string): string[] {
         return Object.entries(this.inAppPurchase)
             .filter(([, value]) => value === extensionId)
             .map(([key]) => key);

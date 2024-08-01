@@ -16,12 +16,12 @@ describe('InAppPurchase', () => {
 
     it('should get in-app purchases by identifier id', () => {
         InAppPurchase.init({ identifier1: 'iap1', identifier2: 'iap2', identifier3: 'iap2', identifier4: 'iap1' });
-        expect(InAppPurchase.getByExtensionId('iap2')).toEqual(['identifier2', 'identifier3']);
+        expect(InAppPurchase.getByExtension('iap2')).toEqual(['identifier2', 'identifier3']);
     });
 
     it('should return an empty object if no in-app purchases for the given identifier id', () => {
         InAppPurchase.init({ identifier1: 'iap1', identifier2: 'iap2' });
-        expect(InAppPurchase.getByExtensionId('identifier3')).toEqual([]);
+        expect(InAppPurchase.getByExtension('identifier3')).toEqual([]);
     });
 
     it('should check if an in-app purchase is active', () => {

@@ -91,7 +91,7 @@ import type { AdminHelpCenterState } from './app/state/admin-help-center.store';
 import type { DevtoolComponent } from './app/adapter/view/sw-vue-devtools';
 import type { CmsPageState } from './module/sw-cms/state/cms-page.state';
 import type { TopBarButtonState } from './app/state/topbar-button.store';
-import type { IapState } from './app/store/in-app-purchases.store';
+import type { InAppPurchaseCheckoutState } from './app/store/in-app-purchase-checkout.store';
 
 // trick to make it an "external module" to support global type extension
 
@@ -170,7 +170,7 @@ declare global {
         _features_: {
             [featureName: string]: boolean
         };
-        _inAppPurchase_: Record<string, string>;
+        _inAppPurchases_: Record<string, string>;
         processingInactivityLogout?: boolean;
         _sw_extension_component_collection: DevtoolComponent[];
         // Only available with Vite
@@ -181,7 +181,7 @@ declare global {
         [featureName: string]: boolean
     };
 
-    const _inAppPurchase_: Record<string, string>;
+    const _inAppPurchases_: Record<string, string>;
 
     /**
      * Define global container for the bottle.js containers
@@ -353,8 +353,8 @@ declare global {
 
     interface PiniaRootState {
         cmsPageState: CmsPageState,
+        inAppPurchaseCheckout: InAppPurchaseCheckoutState,
         topBarButtonState: TopBarButtonState,
-        inAppPurchase: IapState,
     }
 
     /**

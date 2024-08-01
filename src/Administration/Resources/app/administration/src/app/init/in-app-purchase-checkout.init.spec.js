@@ -1,13 +1,13 @@
 /**
  * @package checkout
  */
-import initializeInAppPurchase from 'src/app/init/in-app-purchase.init';
-import { trigger } from '@shopware-ag/meteor-admin-sdk/es/in-app-purchases';
-import 'src/app/store/in-app-purchases.store';
+import { purchase } from '@shopware-ag/meteor-admin-sdk/es/iap';
+import initializeInAppPurchaseCheckout from './in-app-purchase-checkout.init';
+import 'src/app/store/in-app-purchase-checkout.store';
 
 describe('src/app/init/in-app-purchase.init.ts', () => {
     beforeAll(() => {
-        initializeInAppPurchase();
+        initializeInAppPurchaseCheckout();
     });
 
     beforeEach(() => {
@@ -22,11 +22,11 @@ describe('src/app/init/in-app-purchase.init.ts', () => {
             active: true,
         });
 
-        Shopware.Store.get('inAppPurchase').$reset();
+        Shopware.Store.get('inAppPurchaseCheckout').$reset();
     });
 
     it('should handle incoming inAppPurchases requests', async () => {
-        await trigger({
+        await purchase({
             title: 'Your purchase title',
             variant: 'default',
             showHeader: true,
@@ -34,6 +34,6 @@ describe('src/app/init/in-app-purchase.init.ts', () => {
             closable: true,
         });
 
-        expect(Shopware.Store.get('inAppPurchase').modal).toBeDefined();
+        expect(Shopware.Store.get('inAppPurchaseCheckout').entry).toBeDefined();
     });
 });

@@ -203,7 +203,7 @@ describe('src/app/main.ts', () => {
             'filterFactory', 'notification', 'context', 'window', 'extensionComponentSections',
             'tabs', 'cms', 'menu', 'settingItems', 'modals', 'mainModules',
             'actionButton', 'actions', 'extensionDataHandling', 'language',
-            'userInformation', 'worker', 'usageData', 'inAppPurchase', 'store', 'topbarButton'
+            'userInformation', 'worker', 'usageData', 'store', 'topbarButton', 'inAppPurchaseCheckout',
         ];
 
         const initializers = Shopware.Application.getContainer('init').$list();

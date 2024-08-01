@@ -1597,8 +1597,8 @@
   "sw-ai-copilot-warning": {
     "text": "AI-Antworten können ungenau oder irreführend sein."
   },
-  "sw-in-app-purchases": {
-    "title": "Aktivieren den Shopware Extension Store"
+  "sw-in-app-purchase-checkout": {
+    "exsTitle": "Aktivieren den Shopware Extension Store"
   },
   "help-center": {
     "sidebar": {

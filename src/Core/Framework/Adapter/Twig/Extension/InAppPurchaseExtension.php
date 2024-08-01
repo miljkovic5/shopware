@@ -16,8 +16,8 @@ class InAppPurchaseExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('in_app_purchase', $this->isActive(...)),
-            new TwigFunction('all_in_app_purchases', $this->all(...)),
+            new TwigFunction('inAppPurchase', $this->isActive(...)),
+            new TwigFunction('allInAppPurchases', $this->all(...)),
         ];
     }
 
